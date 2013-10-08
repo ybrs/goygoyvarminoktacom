@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head>
+<title>HTML KickStart Elements</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="" />
+<meta name="copyright" content="" />
+<link rel="stylesheet" type="text/css" href="/static/css/kickstart.css" media="all" />                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="/static/style.css" media="all" />                          <!-- CUSTOM STYLES -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/kickstart.js"></script>                                  <!-- KICKSTART -->
+</head><body>
+
+<div class="grid">
+	
+<!-- ===================================== END HEADER ===================================== -->
+	 
+<div class="col_12">
+	<div class="col_9">
+	<p>
+		<h1>var sanirsam....</h1>
+	</p>
+
+	{% for msg in messages %}
+	<blockquote>
+	<p>
+		{{msg['msg'] | safe}}
+	<span>Anonim</span>
+	</p>
+	</blockquote>
+	{% endfor %}
+
+	<p>
+		<form method="POST" action="/varmidirkiacaba">
+			<textarea id="textarea1" placeholder="Var mi soyle..." name="answer" style="width:100%"></textarea>
+			<br>
+			<input type="submit" name="submit" value="kaydet">
+		</form>
+	</p>
+
+	</div>
+	
+	<div class="col_3">
+	<h5>Soysal medya</h5>
+	<a class="button  small" href="https://twitter.com/search?q=goygoy&src=typd" target="_blank">
+		<i class="icon-twitter-sign icon-4x"></i> 
+	</a>
+	<a class="button  small" 
+		href="https://www.facebook.com/search/results.php?q=goygoy&init=mag_glass&tas=0.9407639945857227&search_first_focus=1381211046933" target="_blank">
+		<i class="icon-facebook-sign icon-4x"></i>
+	</a>
+
+	{#
+	<a class="button  small">
+		<i class="icon-github-sign icon-4x"></i>
+	</a>
+
+	<span class="icon social x-large darkgray" data-icon="1"></span>
+	<span class="icon social x-large black" data-icon="w"></span>
+	<span class="icon x-large pink" data-icon="*"></span>
+	<span class="icon social x-large green" data-icon="v"></span>
+	#}
+	<h5>Button w/Icon</h5>
+	<a class="button orange small" href="#"><i class="icon-rss"></i> RSS</a>
+	</div>
+	
+	<hr />
+</div>
+
+</div><!-- END GRID -->
+
+<!-- ===================================== START FOOTER ===================================== -->
+<div class="clear"></div>
+<div id="footer">
+&copy; Kopyrayt 2013-2020 All Right dediler ama vermediler. This website was built with <a href="http://www.99lime.com">HTML KickStart</a>, <a href="http://github.com">github</a>, <a href="http://flask.pocoo.org/">flask</a>, <a href="//redis.io">redis</a>
+</div>
+
+</body></html>
